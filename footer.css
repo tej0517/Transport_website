@@ -12,7 +12,7 @@
 
 /* Footer Container Styling */
 .footer {
-    background-image: url('/images/footer-main-bg-image.svg'); /* The main background image */
+    background-image: url('images/footer-main-bg-image.svg'); /* The main background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,4 +181,5 @@
     .footer-bottom-bar .footer-bottom-link {
         margin: 5px 0; /* Add vertical margin for stacked links */
     }
+
 }
