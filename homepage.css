@@ -247,7 +247,7 @@ body {
 .home-section-container {
     background-color: white;
     padding: 2rem;
-    background-image: url('/images/home-sec-2-bg-img.png');
+    background-image: url('images/home-sec-2-bg-img.png');
     background-repeat: no-repeat;
     background-position: top right;
     margin-left: auto;
@@ -340,7 +340,7 @@ body {
 .home-services-container {
     background-color: white;
     padding: 3rem 2rem;
-    background-image: url('/images/home-sec-3-bg-img.png');
+    background-image: url('images/home-sec-3-bg-img.png');
     background-repeat: no-repeat;
     background-position: bottom left;
     margin-left: auto;
@@ -476,7 +476,7 @@ body {
 
 .home-stats-container {
     height: fit-content;
-    background-image: url(/images/sec-4-service.svg);
+    background-image: url(images/sec-4-service.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -567,7 +567,7 @@ body {
 
 /* ====== Section 5 – Testimonials ====== */
 #section-5 {
-    background: url("/images/home-last-caraousal-bg.svg") center/cover no-repeat;
+    background: url("images/home-last-caraousal-bg.svg") center/cover no-repeat;
     padding: 4rem 0;
 }
 
@@ -762,7 +762,7 @@ body {
    =================================================== */
 
 .home-services-container-sec-7 {
-    background-image: url('/images/home-sec-7-bg-img.png');
+    background-image: url('images/home-sec-7-bg-img.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 3rem 2rem;
@@ -1230,3 +1230,4 @@ body {
         height: 60px;
     }
 }
+
