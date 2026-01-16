@@ -51,7 +51,7 @@ body {
 .hero-section {
   position: relative;
   height: 420px;
-  background-image: url("/images/Group 1261157279.svg");
+  background-image: url("images/Group 1261157279.svg");
   background-size: cover;
   background-position: center center;
   color: #ffffff;
@@ -366,7 +366,7 @@ body {
 
 /* CTA banner */
 .transport-cta {
-  background-image: url("/images/sec-4-service.svg");
+  background-image: url("images/sec-4-service.svg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -771,4 +771,5 @@ body {
     width: 35px;
     height: 35px;
   }
+
 }
