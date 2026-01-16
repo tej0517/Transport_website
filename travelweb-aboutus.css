@@ -1,0 +1,832 @@
+/* ================= GLOBAL RESETS & VARIABLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Archivo", system-ui, -apple-system, sans-serif;
+    background: #f8f9fa;
+    color: #212121;
+    line-height: 1.6;
+}
+
+/* WhatsApp Floating Button */
+.home-sec-1-whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: white;
+    color: #25D366;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.home-sec-1-whatsapp-btn i {
+    font-size: 1.3rem;
+}
+
+.home-sec-1-whatsapp-btn:hover {
+    background-color: #25D366;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* ================= SECTION 1: HERO ================= */
+.travelweb-aboutus-sec-1 {
+    background-image: url('/images/about-us-heading-bg-img-t.svg');
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.travelweb-aboutus-sec-1-p1 {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+/* ================= SECTION 2: INTRO ================= */
+.travelweb-aboutus-sec-2 {
+    background-color: white;
+}
+
+.travelweb-aboutus-sec-2-p1 {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #E63946;
+    margin-bottom: 1.5rem;
+}
+
+.travelweb-aboutus-sec-2-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.travelweb-aboutus-sec-2-text, 
+.travelweb-aboutus-sec-2-subtext {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.travelweb-aboutus-sec-2-text strong {
+    font-weight: 700;
+    color: #333;
+}
+
+/* ================= SECTION 3: TRUCK IMAGE ================= */
+.truck-img-section {
+    background-color: #f8f9fa;
+}
+
+.travelweb-aboutus-img2 {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* ================= SECTION 4: VISION / MISSION ================= */
+.section-4-wrapper {
+    background: #FFF3F5;
+}
+
+.travelweb-aboutus-sec-4-title {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #E63946;
+    margin-bottom: 1rem;
+}
+
+.travelweb-aboutus-sec-4-desc {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.travelweb-aboutus-img3,
+.travelweb-aboutus-img4 {
+    max-width: 250px;
+    height: auto;
+}
+
+/* ================= SECTION 5: TIMELINE ================= */
+.travelweb-aboutus-sec-5 {
+    background: #ffffff;
+}
+
+.travelweb-aboutus-sec-5-p {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #E63946;
+    margin-bottom: 2rem;
+}
+
+.section-5 {
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.section-5-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-5-timeline {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 3rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(230, 57, 70, 0.3) transparent;
+}
+
+.section-5-timeline::-webkit-scrollbar {
+    height: 6px;
+}
+
+.section-5-timeline::-webkit-scrollbar-thumb {
+    background: rgba(230, 57, 70, 0.4);
+    border-radius: 3px;
+}
+
+.section-5-timeline::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.section-5-timeline-wrapper {
+    position: relative;
+    min-width: min-content;
+    display: flex;
+    align-items: center;
+    min-height: 180px;
+}
+
+.section-5-timeline-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #e63946 0%, #e63946 100%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.section-5-timeline-row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-5-node {
+    position: relative;
+    flex: 0 0 auto;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-5-node-dot {
+    width: 16px;
+    height: 16px;
+    background: #e63946;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(230, 57, 70, 0.15);
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.section-5-node:hover .section-5-node-dot {
+    transform: scale(1.2);
+}
+
+.section-5-node-connector {
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    background: #e63946;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.section-5-node-top .section-5-node-connector {
+    bottom: 50%;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.section-5-node-bottom .section-5-node-connector {
+    top: 50%;
+    height: 50px;
+    margin-top: 8px;
+}
+
+.section-5-node-label {
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 4;
+    font-family: "Archivo", sans-serif;
+}
+
+.section-5-node-top .section-5-node-label { 
+    bottom: calc(50% + 58px); 
+}
+
+.section-5-node-bottom .section-5-node-label { 
+    top: calc(50% + 58px); 
+}
+
+.section-5-city { 
+    font-size: 1rem; 
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.section-5-year { 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+    color: #e63946; 
+}
+
+/* ================= SECTION 6: STATS ================= */
+.travelweb-aboutus-sec-6 {
+    background-image: url('images/travelweb-aboutus-img6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Journey-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.stats-num {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin: 0.5rem 0;
+}
+
+.stats-label {
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+/* ================= SECTION 7: GROWTH ================= */
+.travelweb-aboutus-sec-7 {
+    background-color: white;
+}
+
+.travelweb-aboutus-sec-7-p1 {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #E63946;
+    text-align: center;
+}
+
+.travelweb-aboutus-sec-7-p2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.graph-image-about-us-main-div {
+    display: flex;
+    justify-content: center;
+}
+
+.travelweb-aboutus-img12 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= SECTION 8: TEAM CAROUSEL ================= */
+.aboutus-carousel-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aboutus-carousel {
+    width: 100%;
+    position: relative;
+}
+
+.aboutus-carousel-window {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.aboutus-carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.travelweb-aboutus-sec-8 {
+    background-image: url('images/travelweb-aboutus-img13.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 100%;
+    padding: 4rem 0;
+}
+
+.carousel-card {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.team-img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.team-name {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.team-desc {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ================= SECTION 9: WORKFLOW ================= */
+.travelweb-aboutus-sec-9 {
+    background-color: white;
+}
+
+.travelweb-aboutus-sec-9-p1 {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #E63946;
+}
+
+.travelweb-aboutus-img16 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= SECTION 10: CTA ================= */
+.section-6-cta {
+    background-color: #f8f9fa;
+}
+
+.transport-cta {
+    background-image: url('images/travelweb-aboutus-img15.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.transport-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.transport-cta > .row {
+    position: relative;
+    z-index: 2;
+}
+
+.transport-cta-title {
+    font-family: "Rasa", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+}
+
+.transport-cta-text {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.transport-cta-btn-about {
+    display: inline-block;
+    background-color: #E63946;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+    text-align: center;
+}
+
+.transport-cta-btn-about:hover {
+    background-color: #d12c3c;
+    color: white;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Large Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .travelweb-aboutus-sec-1-p1 {
+        font-size: 4rem;
+    }
+    
+    .travelweb-aboutus-sec-2-p1,
+    .travelweb-aboutus-sec-5-p,
+    .travelweb-aboutus-sec-7-p1,
+    .travelweb-aboutus-sec-9-p1 {
+        font-size: 3rem;
+    }
+    
+    .travelweb-aboutus-sec-4-title {
+        font-size: 2.5rem;
+    }
+    
+    .stats-num {
+        font-size: 3rem;
+    }
+    
+    .team-name {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablet devices (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+    .travelweb-aboutus-sec-1 {
+        min-height: 350px;
+    }
+    
+    .travelweb-aboutus-sec-1-p1 {
+        font-size: 3rem;
+    }
+    
+    .travelweb-aboutus-sec-2-p1,
+    .travelweb-aboutus-sec-5-p,
+    .travelweb-aboutus-sec-7-p1,
+    .travelweb-aboutus-sec-9-p1 {
+        font-size: 2.2rem;
+    }
+    
+    .travelweb-aboutus-sec-4-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-5-node {
+        width: 120px;
+    }
+    
+    .stats-num {
+        font-size: 2.2rem;
+    }
+    
+    .team-name {
+        font-size: 1.8rem;
+    }
+    
+    .transport-cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .team-desc {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile devices (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    .travelweb-aboutus-sec-1 {
+        min-height: 300px;
+    }
+    
+    .travelweb-aboutus-sec-1-p1 {
+        font-size: 2.5rem;
+    }
+    
+    .travelweb-aboutus-sec-2-p1,
+    .travelweb-aboutus-sec-5-p,
+    .travelweb-aboutus-sec-7-p1,
+    .travelweb-aboutus-sec-9-p1 {
+        font-size: 1.8rem;
+    }
+    
+    .travelweb-aboutus-sec-2-text,
+    .travelweb-aboutus-sec-2-subtext,
+    .travelweb-aboutus-sec-4-desc,
+    .travelweb-aboutus-sec-7-p2,
+    .transport-cta-text {
+        font-size: 1rem;
+    }
+    
+    .travelweb-aboutus-sec-4-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .section-5-node {
+        width: 100px;
+    }
+    
+    .section-5-node-top .section-5-node-connector,
+    .section-5-node-bottom .section-5-node-connector {
+        height: 40px;
+    }
+    
+    .section-5-node-top .section-5-node-label { 
+        bottom: calc(50% + 48px); 
+    }
+    
+    .section-5-node-bottom .section-5-node-label { 
+        top: calc(50% + 48px); 
+    }
+    
+    .section-5-city { 
+        font-size: 0.9rem; 
+    }
+    
+    .section-5-year { 
+        font-size: 1rem; 
+    }
+    
+    .stats-item {
+        margin-bottom: 2rem;
+    }
+    
+    .stats-num {
+        font-size: 2rem;
+    }
+    
+    .stats-label {
+        font-size: 1rem;
+    }
+    
+    .Journey-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .team-img {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .team-name {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .team-role {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .team-desc {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .transport-cta-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .transport-cta-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .transport-cta-btn-about {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
+    .home-sec-1-whatsapp-btn .whatsapp-text {
+        display: none;
+    }
+    
+    .home-sec-1-whatsapp-btn {
+        padding: 0.8rem;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+    }
+    
+    .home-sec-1-whatsapp-btn i {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    
+    .carousel-dots {
+        bottom: 10px;
+    }
+}
+
+/* Small mobile devices (max-width: 575.98px) */
+@media (max-width: 575.98px) {
+    .travelweb-aboutus-sec-1 {
+        min-height: 250px;
+    }
+    
+    .travelweb-aboutus-sec-1-p1 {
+        font-size: 2rem;
+    }
+    
+    .travelweb-aboutus-sec-2-p1,
+    .travelweb-aboutus-sec-5-p,
+    .travelweb-aboutus-sec-7-p1,
+    .travelweb-aboutus-sec-9-p1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-5-node {
+        width: 90px;
+    }
+    
+    .section-5-timeline-row {
+        gap: 1.5rem;
+    }
+    
+    .section-5-city { 
+        font-size: 0.85rem; 
+    }
+    
+    .section-5-year { 
+        font-size: 0.9rem; 
+    }
+    
+    .stats-num {
+        font-size: 1.8rem;
+    }
+    
+    .stats-label {
+        font-size: 0.9rem;
+    }
+    
+    .Journey-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .team-img {
+        max-width: 200px;
+    }
+    
+    .team-name {
+        font-size: 1.4rem;
+    }
+    
+    .transport-cta-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .travelweb-aboutus-sec-1-p1 {
+        font-size: 1.8rem;
+    }
+    
+    .travelweb-aboutus-sec-2-p1,
+    .travelweb-aboutus-sec-5-p,
+    .travelweb-aboutus-sec-7-p1,
+    .travelweb-aboutus-sec-9-p1 {
+        font-size: 1.4rem;
+    }
+    
+    .section-5-node {
+        width: 80px;
+    }
+    
+    .section-5-timeline-row {
+        gap: 1rem;
+    }
+    
+    .section-5-city { 
+        font-size: 0.8rem; 
+    }
+    
+    .section-5-year { 
+        font-size: 0.85rem; 
+    }
+    
+    .team-desc {
+        font-size: 0.95rem;
+    }
+    
+    .team-img {
+        max-width: 180px;
+    }
+}

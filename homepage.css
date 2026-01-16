@@ -1,0 +1,1232 @@
+/* ===================================================
+   GENERAL STYLES
+   =================================================== */
+
+body {
+    font-family: 'Archivo', sans-serif;
+    background-color: #f8f8f8;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===================================================
+   SECTION 1: HERO CAROUSEL STYLES
+   =================================================== */
+
+/* Reset Bootstrap carousel indicator defaults */
+.carousel-indicators [data-bs-target] {
+    box-sizing: border-box;
+    text-indent: 0;
+}
+
+.home-sec-1-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.home-sec-1-carousel .carousel-indicators button {
+    box-sizing: border-box;
+}
+
+/* Main carousel section wrapper */
+.home-sec-1-carousel-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carousel container */
+.home-sec-1-carousel {
+    width: 100%;
+    position: relative;
+}
+
+/* Individual carousel item */
+.home-sec-1-carousel-item {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+}
+
+/* Carousel images */
+.home-sec-1-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Content wrapper */
+.home-sec-1-content-wrapper {
+    padding-left: 5% !important; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.home-sec-1-content-wrapper .container,
+.home-sec-1-content-wrapper .row,
+.home-sec-1-content-wrapper .col-lg-7,
+.home-sec-1-content-wrapper .col-md-9 {
+    pointer-events: none;
+}
+
+.home-sec-1-title-move,
+.home-sec-1-title,
+.home-sec-1-subtitle,
+.home-sec-1-btn {
+    pointer-events: all;
+}
+
+/* Title */
+.home-sec-1-title,
+.home-sec-1-title-move {
+    font-family: 'Rasa', serif;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+/* Subtitle */
+.home-sec-1-subtitle {
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInLeft 1s ease-out 0.4s both;
+}
+
+/* CTA Button */
+.home-sec-1-btn {
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.home-sec-1-btn:hover {
+    background-color: #d12c3c;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+}
+
+/* Carousel indicators - CIRCULAR, CENTERED, CLICKABLE */
+.home-sec-1-indicators {
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    gap: 0.8rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    pointer-events: all;
+}
+
+.home-sec-1-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid white !important;
+    margin: 0 !important;
+    padding: 0;
+    transition: all 0.3s ease;
+    opacity: 1 !important;
+    cursor: pointer;
+    flex: 0 0 12px !important;
+    text-indent: 0 !important;
+    pointer-events: all;
+}
+
+.home-sec-1-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+.home-sec-1-indicators button.active {
+    background-color: #E63946 !important;
+    border: 2px solid white;
+    transform: scale(1.3);
+}
+
+/* WhatsApp Chat Button - FLOATING ABOVE ALL SECTIONS */
+.home-sec-1-whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: white;
+    color: #25D366;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.home-sec-1-whatsapp-btn i {
+    font-size: 1.3rem;
+}
+
+.home-sec-1-whatsapp-btn:hover {
+    background-color: #25D366;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================================
+   SECTION 2: ABOUT DLPL & CLIENTS
+   =================================================== */
+
+.home-section-container {
+    background-color: white;
+    padding: 2rem;
+    background-image: url('/images/home-sec-2-bg-img.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-main-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* padding: 3rem 0; */
+}
+
+.home-about-heading {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.home-about-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.home-about-bold-text {
+    font-weight: 600;
+}
+
+.home-know-more-btn {
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.home-know-more-btn:hover {
+    background-color: #d12c3c;
+    color: white;
+}
+
+.home-truck-image-wrapper {
+    /* background-color: #f0f0f0; */
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+.home-truck-img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-clients-heading {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home-clients-subtext {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* ===================================================
+   SECTION 3: OUR SERVICES
+   =================================================== */
+
+.home-services-container {
+    background-color: white;
+    padding: 3rem 2rem;
+    background-image: url('/images/home-sec-3-bg-img.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-services-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* padding: 3rem 0; */
+}
+
+.home-services-heading {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.home-services-subheading {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.home-service-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    height: 100%;
+}
+
+.home-service-card-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.home-service-card-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home-service-card-description {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.home-service-features-list {
+    margin-top: 1.5rem;
+    padding-left: 0;
+}
+
+.home-service-feature-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.home-service-feature-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #E63946;
+    border-radius: 50%;
+}
+
+.sec-3-img-main-div {
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+}
+
+/* ===================================================
+   SECTION 4: WHY CHOOSE US
+   =================================================== */
+
+.home-why-us-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.home-why-us-content-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.home-why-us-heading {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.home-why-us-subheading {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-stats-container {
+    height: fit-content;
+    background-image: url(/images/sec-4-service.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 1rem;
+}
+
+.home-stat-item-icon {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.home-stat-item-number {
+    font-family: 'Rasa', serif;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.home-stat-item-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home-feature-card-wrapper {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.home-feature-card-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-feature-card-icon-box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-feature-card-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.home-feature-card-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.home-feature-card-description {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   SECTION 5: TESTIMONIALS
+   =================================================== */
+
+:root {
+    --primary-color: #ff4c60;
+    --star-color: #f6a623;
+    --heading-font: "Rasa", serif;
+    --body-font: "Archivo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+/* ====== Section 5 – Testimonials ====== */
+#section-5 {
+    background: url("/images/home-last-caraousal-bg.svg") center/cover no-repeat;
+    padding: 4rem 0;
+}
+
+#section-5 .section-title {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#section-5 .section-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.testimonial-body {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.star-rating {
+    color: var(--star-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Carousel nav buttons */
+.testimonial-carousel-nav {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.testimonial-carousel-nav button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #E63946;
+    color: #fff;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-carousel-nav button:hover {
+    background-color: #d12c3c;
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   GALLERY CAROUSEL
+   =================================================== */
+
+.gallery-section {
+    padding: 3rem 0;
+}
+
+.section-6 {
+    padding: 0% 5%;
+}
+
+.transport-cta {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 3rem 1rem;
+}
+
+.transport-cta-title {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.transport-cta-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.transport-cta-btn {
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.transport-cta-btn:hover {
+    background-color: #d12c3c;
+    color: white;
+}
+
+.section-6-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    background: #ffffff;
+}
+
+.section-6-carousel-track {
+    display: flex;
+    width: max-content;
+    animation: section-6-scroll 40s linear infinite;
+}
+
+.section-6-carousel-item {
+    flex: 0 0 auto;
+    padding: 0 10px;
+}
+
+.section-6-carousel-item img {
+    /* width: 235px; */
+    height: 235px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.section-6-carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes section-6-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===================================================
+   SECTION 7: PARTNER WITH US
+   =================================================== */
+
+.home-services-container-sec-7 {
+    background-image: url('/images/home-sec-7-bg-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 2rem;
+}
+
+.home-view-detail-btn {
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.home-view-detail-btn:hover {
+    background-color: #d12c3c;
+    color: white;
+}
+
+/* ===================================================
+   SECTION 8: CONTACT FORM
+   =================================================== */
+
+.contact-content-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.contact-form-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-family: 'Rasa', serif;
+    color: #E63946;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.form-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.form-control {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #E63946;
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+}
+
+.custom-send {
+    background-color: #E63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.custom-send:hover {
+    background-color: #d12c3c;
+}
+
+.info-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #ffe0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-box i {
+    color: #E63946;
+    font-size: 1.5rem;
+}
+
+.info-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.info-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===================================================
+   RESPONSIVE ADJUSTMENTS
+   =================================================== */
+
+/* Large Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .home-sec-1-title,
+    .home-sec-1-title-move {
+        font-size: 3.5rem;
+    }
+    
+    .home-sec-1-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .home-about-heading,
+    .home-clients-heading,
+    .home-services-heading,
+    .home-why-us-heading {
+        font-size: 3rem;
+    }
+
+    .home-about-text {
+        font-size: 1.2rem;
+    }
+
+    .home-services-subheading {
+        font-size: 1.2rem;
+    }
+
+    .home-why-us-subheading {
+        font-size: 1.2rem;
+    }
+
+    .home-stat-item-number {
+        font-size: 2.5rem;
+    }
+
+    .home-stat-item-text {
+        font-size: 1.1rem;
+    }
+
+    .home-feature-card-title {
+        font-size: 1.3rem;
+    }
+
+    .home-feature-card-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet devices (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+    .home-sec-1-carousel-item {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .home-sec-1-title,
+    .home-sec-1-title-move {
+        font-size: 2.5rem;
+    }
+
+    .home-sec-1-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .home-sec-1-btn {
+        padding: 0.7rem 2rem;
+    }
+
+    .home-about-heading,
+    .home-services-heading,
+    .home-why-us-heading,
+    #section-5 .section-title {
+        font-size: 2.2rem;
+    }
+
+    .home-clients-heading {
+        font-size: 1.8rem;
+    }
+
+    .home-services-subheading,
+    .home-why-us-subheading,
+    #section-5 .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-6-carousel-item img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+/* Mobile devices (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    .home-sec-1-carousel-item {
+        height: 60vh;
+        min-height: 450px;
+    }
+
+    .home-sec-1-title,
+    .home-sec-1-title-move {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .home-sec-1-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-sec-1-btn {
+        padding: 0.6rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .home-sec-1-indicators {
+        bottom: 1.5rem;
+    }
+
+    .home-sec-1-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .home-sec-1-indicators button.active {
+        transform: scale(1.2);
+    }
+
+    .home-sec-1-whatsapp-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .home-sec-1-whatsapp-btn i {
+        font-size: 1.2rem;
+    }
+
+    .home-about-col-left,
+    .home-image-col-right {
+        text-align: center;
+        padding: 1.5rem !important;
+    }
+
+    .home-truck-image-wrapper {
+        margin-top: 2rem;
+    }
+
+    .home-about-heading,
+    .home-services-heading,
+    .home-why-us-heading,
+    #section-5 .section-title {
+        font-size: 1.8rem;
+    }
+
+    .home-clients-heading {
+        font-size: 1.6rem;
+    }
+
+    .home-services-subheading,
+    .home-why-us-subheading,
+    #section-5 .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .home-stat-item-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home-stat-item-number {
+        font-size: 1.8rem;
+    }
+
+    .home-stat-item-text {
+        font-size: 0.9rem;
+    }
+
+    .home-feature-card-icon-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .home-feature-card-title {
+        font-size: 1.1rem;
+    }
+
+    .home-feature-card-description {
+        font-size: 0.9rem;
+    }
+
+    .section-6-carousel-item img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-name {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-body {
+        font-size: 0.95rem;
+    }
+
+    .transport-cta-title {
+        font-size: 1.6rem;
+    }
+
+    .transport-cta-text {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile devices (max-width: 575.98px) */
+@media (max-width: 575.98px) {
+    .home-sec-1-carousel-item {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .home-sec-1-title,
+    .home-sec-1-title-move {
+        font-size: 1.6rem;
+    }
+
+    .home-sec-1-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .home-sec-1-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .home-sec-1-whatsapp-btn .whatsapp-text {
+        display: none;
+    }
+
+    .home-sec-1-whatsapp-btn {
+        padding: 0.8rem;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+    }
+
+    .home-sec-1-whatsapp-btn i {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    .home-about-heading,
+    .home-services-heading,
+    .home-why-us-heading,
+    #section-5 .section-title {
+        font-size: 1.5rem;
+    }
+
+    .home-about-text,
+    .home-service-card-description {
+        font-size: 1rem;
+    }
+
+    .home-service-card-title {
+        font-size: 1.3rem;
+    }
+
+    .home-service-feature-item {
+        font-size: 0.95rem;
+    }
+
+    .section-6-carousel-item img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .transport-cta {
+        padding: 1.5rem;
+        margin: 2rem 0.5rem;
+    }
+
+    .transport-cta-title {
+        font-size: 1.4rem;
+    }
+
+    .transport-cta-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .home-sec-1-title,
+    .home-sec-1-title-move {
+        font-size: 1.4rem;
+    }
+
+    .home-sec-1-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .home-about-heading,
+    .home-services-heading,
+    .home-why-us-heading,
+    #section-5 .section-title {
+        font-size: 1.3rem;
+    }
+
+    .home-about-text,
+    .home-service-card-description {
+        font-size: 0.95rem;
+    }
+
+    .section-6-carousel-item img {
+        width: 90px;
+        height: 60px;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+    }
+}

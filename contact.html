@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DLPL Logistics</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR CONTAINER - Navbar will be loaded here ========== -->
+    <div id="navbar-container"></div>
+
+    <!-- Section 1: Hero Header -->
+    <section class="contact-hero-section">
+        <div class="container text-center hero-content">
+            <h1 class="hero-title">Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- WhatsApp Chat Button (Floating) -->
+    <a href="https://wa.me/919764749898" target="_blank" class="home-sec-1-whatsapp-btn">
+        <i class="bi bi-whatsapp"></i>
+        <span class="whatsapp-text">Chat On WhatsApp</span>
+    </a>
+
+    <!-- Section 2: Contact Form & Info -->
+    <section class="contact-content-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Left Column: Form -->
+                <div class="col-lg-7 col-md-12">
+                    <div class="card contact-form-card h-100">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="form-title mb-3">Get in touch</h2>
+                            <p class="form-subtitle mb-4">Have a question or need a quote? Our team is here to help.
+                                Reach out to us and we'll respond as soon as possible.</p>
+
+                            <!-- Updated Form -->
+                            <form id="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First name *</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName"
+                                            placeholder="First name" required>
+                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last name *</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName"
+                                            placeholder="Last name" required>
+                                        <div class="invalid-feedback">Please enter your last name.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="you@company.com" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            placeholder="+91 00000 00000" required>
+                                        <div class="invalid-feedback">Please enter your phone number.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message *</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your logistics requirements..." required></textarea>
+                                        <div class="invalid-feedback">Please enter your message.</div>
+                                    </div>
+                                    <!-- Honeypot field for spam protection -->
+                                    <input type="text" name="honeypot" style="display:none">
+                                    
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="w-100 py-2 custom-send" id="submit-btn">
+                                            <span id="btn-text">Send message</span>
+                                            <span id="btn-loading" style="display:none">
+                                                <span class="spinner-border spinner-border-sm" role="status"></span>
+                                                Sending...
+                                            </span>
+                                        </button>
+                                        <p class="text-muted small mt-2 text-center">
+                                            <i class="bi bi-shield-check"></i> Your information is secure
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Info Cards -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex flex-column gap-5">
+                        <!-- Address Card -->
+                        <div class="card info-card">
+                            <div class="card-body p-4 d-flex align-items-start gap-3">
+                                <div class="icon-box">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="info-title">Address</h4>
+                                    <p class="info-text">
+                                        Dhane's Logistics Pvt. Ltd. Survey No. 924/2, Plot No. 13/14, Behind Udyog
+                                        Bhavan, Pune Nashik Highway, Sinnar, Nashik – 422103
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Card -->
+                        <div class="card info-card">
+                            <div class="card-body p-4 d-flex align-items-start gap-3">
+                                <div class="icon-box">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="info-title">Email</h4>
+                                    <p class="info-text">
+                                        dhaneslogistics@rediffmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="card info-card">
+                            <div class="card-body p-4 d-flex align-items-start gap-3">
+                                <div class="icon-box">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="info-title">Phone</h4>
+                                    <p class="info-text mb-1">+91 9764749898</p>
+                                    <p class="info-text">+91 9371983471</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours Card -->
+                        <div class="card info-card">
+                            <div class="card-body p-4 d-flex align-items-start gap-3">
+                                <div class="icon-box">
+                                    <i class="bi bi-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="info-title">Business Hours</h4>
+                                    <p class="info-text mb-1">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                                    <p class="info-text">24/7 Customer Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Pan-India Presence -->
+    <section class="pan-india-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <h2 class="section-heading mb-3">Pan-India Presence</h2>
+                <p class="section-subtext">
+                    With 20+ strategically located branches across India, we ensure comprehensive coverage and seamless
+                    logistics support nationwide.
+                </p>
+            </div>
+
+            <!-- Map and Branches Card Area -->
+            <div class="row g-0 align-items-stretch shadow-lg rounded overflow-hidden bg-white mb-5">
+                <!-- Left: Map Image -->
+                <div class="col-lg-7">
+                    <div class="map-container">
+                        <img src="/images/map-image.svg" alt="India Map" class="img-fluid w-100">
+                    </div>
+                </div>
+
+                <!-- Right: Branches List -->
+                <div class="col-lg-5">
+                    <div class="branches-card p-4 p-md-5 h-100">
+                        <!-- Card Header -->
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="branch-icon-wrap">
+                                <img src="/images/map-sec-logo.png" alt="Building Icon" class="img-fluid">
+                            </div>
+                            <div>
+                                <h3 class="branch-title mb-0">Our Top Branches</h3>
+                                <small class="text-muted">Growing across major cities</small>
+                            </div>
+                        </div>
+
+                        <!-- Cities Grid -->
+                  <div class="row g-3 mb-4">
+    <div class="col-6">
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><i class="bi bi-geo-alt-fill"></i> Nashik</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Sinnar</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Ahmednagar</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Hyderabad</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Bangalore</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Indore</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Kolhapur</li>
+        </ul>
+    </div>
+    <div class="col-6">
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><i class="bi bi-geo-alt-fill"></i> Ankleshwar</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Pune</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Ahmedabad</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Jaipur</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Delhi</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Chennai</li>
+            <li><i class="bi bi-geo-alt-fill"></i> 35+ Expanding</li>
+        </ul>
+    </div>
+</div>
+                        <!-- Info Note Box -->
+                        <div class="branch-note p-3 rounded">
+                            <p class="mb-0">
+                                Our strategic branch locations ensure that we can serve you efficiently, no matter where
+                                you are in India. We continue to expand our network to reach more destinations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="cta-banner rounded overflow-hidden position-relative">
+                <div class="cta-content text-center position-relative py-5 px-3">
+                    <h2 class="text-white mb-3">Let's Talk Transport!</h2>
+                    <p class="text-white mb-0">
+                        Have a query or need a quote? Let's connect and make your logistics experience smooth,
+                        efficient, and reliable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER CONTAINER - Footer will be loaded here ========== -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Transport JS - Footer Loader -->
+    <script src="transport.js"></script>
+
+    <!-- Contact Form Handler -->
+    <script>
+        // Your Web App URL from Google Apps Script deployment
+        const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbx20m411Jw3n8AZjNwWPFrCsImGfj2O-79764Er1tt_gdPkABTnmMN5ThcMjZrVK9Wzhg/exec';
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                if (!validateForm()) {
+                    return;
+                }
+                
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline';
+                submitBtn.disabled = true;
+                
+                // Prepare form data
+                const formData = {
+                    firstName: document.getElementById('firstName').value.trim(),
+                    lastName: document.getElementById('lastName').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    message: document.getElementById('message').value.trim(),
+                    honeypot: document.querySelector('[name="honeypot"]').value
+                };
+                
+                console.log('Submitting data to Google Sheets:', formData);
+                
+                try {
+                    // Send to Google Sheets via Google Apps Script
+                    const response = await fetch(WEB_APP_URL, {
+                        method: 'POST',
+                        body: JSON.stringify(formData),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    const result = await response.json();
+                    console.log('Google Sheets response:', result);
+                    
+                    if (result.success) {
+                        // Success message
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Thank You!',
+                            html: `
+                                <div class="text-start">
+                                    <p><strong>Message Sent Successfully!</strong></p>
+                                    <p>Your query has been recorded (Reference #${result.row}).</p>
+                                    <div class="alert alert-light mt-3 mb-0">
+                                        <small>
+                                            <strong>Submitted Details:</strong><br>
+                                            • Name: ${formData.firstName} ${formData.lastName}<br>
+                                            • Email: ${formData.email}<br>
+                                            • Phone: ${formData.phone}<br>
+                                            • Time: ${new Date().toLocaleString()}
+                                        </small>
+                                    </div>
+                                    <p class="mt-3">Our team will contact you within 24 hours.</p>
+                                </div>
+                            `,
+                            confirmButtonText: 'Great!',
+                            confirmButtonColor: '#d33',
+                            timer: 8000
+                        });
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Optional: Log to console for debugging
+                        console.log('Form submitted successfully. Row:', result.row);
+                        
+                    } else {
+                        throw new Error(result.message || 'Failed to save data');
+                    }
+                    
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    
+                    // User-friendly error message
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Submission Issue',
+                        html: `
+                            <div class="text-start">
+                                <p>There was an issue submitting your form.</p>
+                                <p class="small text-muted mt-2">
+                                    <strong>Please try one of these options:</strong><br>
+                                    1. Try again in a moment<br>
+                                    2. Call us directly: <strong>+91 9764749898</strong><br>
+                                    3. Email: <strong>dhaneslogistics@rediffmail.com</strong><br>
+                                    4. WhatsApp: <strong>+91 9764749898</strong>
+                                </p>
+                                <p class="mt-3">Error: ${error.message}</p>
+                            </div>
+                        `,
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#d33'
+                    });
+                } finally {
+                    // Reset button state
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                }
+            });
+            
+            function validateForm() {
+                let isValid = true;
+                
+                // Check required fields
+                const requiredFields = [
+                    'firstName', 'lastName', 'email', 'phone', 'message'
+                ];
+                
+                requiredFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    const feedback = field.nextElementSibling;
+                    
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        if (feedback) feedback.style.display = 'block';
+                        isValid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                        if (feedback) feedback.style.display = 'none';
+                    }
+                });
+                
+                // Email format validation
+                const emailField = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailField.value && !emailRegex.test(emailField.value)) {
+                    emailField.classList.add('is-invalid');
+                    emailField.nextElementSibling.textContent = 'Please enter a valid email address.';
+                    emailField.nextElementSibling.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Phone number basic validation (at least 10 digits)
+                const phoneField = document.getElementById('phone');
+                const phoneDigits = phoneField.value.replace(/\D/g, '');
+                if (phoneField.value && phoneDigits.length < 10) {
+                    phoneField.classList.add('is-invalid');
+                    phoneField.nextElementSibling.textContent = 'Please enter a valid phone number (at least 10 digits).';
+                    phoneField.nextElementSibling.style.display = 'block';
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Please Check Form',
+                        text: 'Some fields require your attention.',
+                        confirmButtonColor: '#d33'
+                    });
+                }
+                
+                return isValid;
+            }
+            
+            // Remove validation on input
+            form.querySelectorAll('input, textarea').forEach(field => {
+                field.addEventListener('input', function() {
+                    this.classList.remove('is-invalid');
+                    const feedback = this.nextElementSibling;
+                    if (feedback && feedback.classList.contains('invalid-feedback')) {
+                        feedback.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

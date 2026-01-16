@@ -1,0 +1,184 @@
+/* Custom CSS for Footer (footer.css) */
+
+
+
+/* Custom class for text that uses Archivo font (for general content in footer) */
+.footer-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.9em;
+    opacity: 0.9;
+    color: #fff; /* Default text color for the main footer section */
+}
+
+/* Footer Container Styling */
+.footer {
+    background-image: url('/images/footer-main-bg-image.svg'); /* The main background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+/* Ensure content is above the overlay */
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo Styling */
+.footer-logo {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+    display: block; /* Ensures it behaves as a block element for centering */
+    margin-bottom: 9% !important;
+}
+
+/* Heading Styling */
+.footer-heading {
+    font-family: 'Rasa', sans-serif; /* Main headings font */
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    color: #fff; /* Ensure headings are white */
+}
+
+/* Contact Item Styling */
+.contact-item i {
+    font-size: 1.1em;
+    color: #fff; /* Icon color */
+}
+
+.contact-item .footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item .footer-link:hover {
+    color: #e6304d; /* Red color on hover */
+}
+
+/* Links List Styling */
+.footer-links-list li {
+    margin-bottom: 8px; /* Adjust spacing between links */
+}
+
+.footer-links-list .footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block; /* Allows padding/margin, but doesn't take full width */
+    transition: color 0.3s ease;
+}
+
+.footer-links-list .footer-link:hover {
+    color: #e6304d; /* Red color on hover */
+}
+
+/* Social Icons Styling */
+/* .social-icons {
+    justify-content: center !important;
+} */
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes icons circular */
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevent icons from shrinking on small screens */
+}
+
+/* Specific background colors for social media icons */
+.social-icon.whatsapp { background-color: #25d366; }
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.instagram { background-color: #C13584; } /* Instagram's signature pink/purple */
+.social-icon.linkedin { background-color: #0077b5; }
+
+.social-icon:hover {
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+/* Footer Bottom Bar Styling */
+.footer-bottom-bar {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Darker text for contrast */
+    font-size: 0.85em;
+    margin-top: 3%; /* Space above the bottom bar */
+}
+
+.footer-bottom-bar .footer-text {
+    color: #333 !important; /* Override default white for bottom bar text */
+    font-size: 0.85em; /* Ensure font size is consistent */
+    opacity: 1; /* Make it fully opaque */
+}
+
+.footer-bottom-bar .footer-bottom-link {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-bar .footer-bottom-link:hover {
+    color: #e6304d; /* Red color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) { /* Medium devices (tablets) and below */
+    .footer-section-company {
+        text-align: center; /* Center logo and text on smaller screens */
+    }
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-heading {
+        text-align: center;
+    }
+    .contact-item,
+    .footer-links-list,
+    .social-icons {
+        justify-content: center !important; /* Center content within these blocks */
+       text-align: center;
+    }
+    .footer-links-list {
+        padding-left: 0; /* Remove default ul padding when centered */
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones) and below */
+    /* Adjust gradient percentages if needed for smaller screens for better visual */
+    .footer-overlay {
+        background:
+            linear-gradient(135deg, rgba(230, 48, 77, 0.7) 25%, transparent 25.5%) top left / 100% 100% no-repeat,
+            linear-gradient(45deg, transparent 75%, rgba(230, 48, 77, 0.7) 75.5%) bottom right / 100% 100% no-repeat;
+    }
+    .footer-text, .footer-bottom-bar p {
+        font-size: 0.8em;
+    }
+    .footer-heading {
+        font-size: 1em;
+        margin-bottom: 1.5rem !important; /* Override Bootstrap default margin for smaller headings */
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 575.98px) { /* Extra small devices (portrait phones) and below */
+    .footer-bottom-bar p {
+        flex-direction: column; /* Stack links vertically */
+        display: flex;
+        align-items: center;
+    }
+    .footer-bottom-bar .footer-bottom-link {
+        margin: 5px 0; /* Add vertical margin for stacked links */
+    }
+}

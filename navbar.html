@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="navbar.css">
+<!-- Add Font Awesome for the hamburger menu -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="top-info-bar d-none d-lg-flex align-items-center justify-content-center px-5">
+    <div class="me-4">
+        <i class="bi bi-geo-alt-fill me-2"></i>
+        Survey No. 924/2, Plot No. 13/14, Behind Udyog Bhavan, Pune Nashik Highway, Sinnar, Nashik – 422103
+    </div>
+    <div class="me-4">
+        <i class="bi bi-telephone-fill me-2"></i>
+        <a href="tel:+919764749898">+91 9764749898</a>
+    </div>
+    <div>
+        <i class="bi bi-envelope-fill me-2"></i>
+        <a href="mailto:dhaneslogistics@rediffmail.com">dhaneslogistics@rediffmail.com</a>
+    </div>
+</div>
+
+<!-- Navbar Section -->
+<section class="navbar-section" id="navfirst">
+    <nav>
+        <ul class="sidebar">
+            <div class="inner-div-sidebar">
+                <li><img src="/images/navbar-logo.svg" alt="" id="navbar-logo-black"></li>
+                <!-- Keep onclick but ensure function exists -->
+                <p onclick="if(typeof hideSidebar !== 'undefined') hideSidebar()">
+                    <a href="#"><i class="fa-solid fa-xmark" style="font-size: larger; color: black;"></i></a>
+                </p>
+            </div>
+            <li><a href="index.html" onclick="if(typeof hideSidebar !== 'undefined') hideSidebar()">Home</a></li>
+            <li><a href="travelweb-aboutus.html" onclick="if(typeof hideSidebar !== 'undefined') hideSidebar()">About Us</a></li>
+            <li><a href="service.html" onclick="if(typeof hideSidebar !== 'undefined') hideSidebar()">Services</a></li>
+            <li class="contactusOnmobile"><a href="contact.html" class="bit-land-nav-contactus" onclick="if(typeof hideSidebar !== 'undefined') hideSidebar()">Contact Us</a></li>
+            <div class="navbar-copywright">
+                <p style="color: black;">© 2025 Dhane's Logistics Pvt. Ltd. All Rights Reserved | Terms & Conditions | Privacy Policy</p>
+            </div>
+        </ul>
+
+        <ul>
+            <li><img src="images/navbar-logo.svg" alt="" class="navbar-logo-img1"></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="travelweb-aboutus.html">About Us</a></li>
+            <li class="hideOnMobile"><a href="service.html">Services</a></li>
+            <li class="hideOnMobile dropdown">
+                <a href="#">Partner &nbsp; <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="travelweb-partner.html">Franchise Opportunity</a></li>
+                    <li><a href="travelweb-partner-fleet.html">Fleet Owner Partnership</a></li>
+                </ul>
+            </li>
+            <li class="hideOnMobile"><a href="contact.html" class="bit-land-nav-contactus">Contact Us</a></li>
+            <!-- Keep onclick but ensure function exists -->
+            <li class="menu-button" onclick="if(typeof toggleSidebar !== 'undefined') toggleSidebar()">
+                <a href="#"><i class="fas fa-bars" id="sidebari1"></i></a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+<script>
+// Define sidebar functions immediately when navbar loads
+(function() {
+    // Only define if not already defined
+    if (typeof window.toggleSidebar === 'undefined') {
+        window.toggleSidebar = function() {
+            const sidebar = document.querySelector('.sidebar');
+            const body = document.querySelector('body');
+            if (sidebar) {
+                sidebar.classList.toggle('open');
+                
+                if (sidebar.classList.contains('open')) {
+                    body.style.overflowY = 'hidden';
+                } else {
+                    body.style.overflowY = 'auto';
+                }
+            }
+        };
+    }
+    
+    if (typeof window.hideSidebar === 'undefined') {
+        window.hideSidebar = function() {
+            const sidebar = document.querySelector('.sidebar');
+            const body = document.querySelector('body');
+            if (sidebar) {
+                sidebar.classList.remove('open');
+                body.style.overflowY = 'auto';
+            }
+        };
+    }
+    
+    console.log('Navbar sidebar functions defined');
+})();
+</script>
+
+</body>
+</html>
